@@ -1,4 +1,7 @@
-function combine(input1: number | string, input2: number | string, resultConversion: "as-number" | "as-text") {
+type Combineable = number | string;
+type ConversionDescriptor = "as-number" | "as-text";
+
+function combine(input1: Combineable, input2: Combineable, resultConversion: ConversionDescriptor) {
     //let result = input1 + input2; // it's gonna say it's an error because it can't know the types involved in the union types.
     let result;
     if(typeof input1 === "number" && typeof input2 === "number" || resultConversion === "as-number") {

@@ -1,0 +1,1 @@
+console.log("Sending data for statistics...");
